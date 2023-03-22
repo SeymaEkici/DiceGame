@@ -8,7 +8,7 @@ public class Die{
     // Die constracture:
     public Die() {
         
-        roll(faceValue);
+        roll();
     }
 
     // Method that rolls the dice randomly
@@ -36,6 +36,6 @@ public class Die{
 
     //Checks if the new faceValue equals to old faceValue
     public boolean equals(Die otherDie) {
-        return faceValue == otherDie.faceValue;
+        return faceValue == otherDie.getFaceValue();
     }
 }

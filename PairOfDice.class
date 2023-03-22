@@ -18,12 +18,12 @@ public class PairOfDice{
 
     // Method that returns the face values of each die
     public String toString() {
-        return "PairOfDice [die1=" + die1 + ", die2=" + die2 + "]";
+        return "PairOfDice [die1=" + die1.getFaceValue() + ", die2=" + die2.getFaceValue() + "]";
     }
 
     //Checks if the new faceValue equals to old faceValue
-    public boolean equals(Die otherDie) {
-        return faceValue == otherDie.faceValue;
+    public boolean equals(PairOfDice otherPairOfDice) {
+        return (die1.getFaceValue() == otherPairOfDice.getDie1() && die2.getFaceValue() == otherPairOfDice.getDie2()) || (die1.getFaceValue() == otherPairOfDice.getDie2() && die2.getFaceValue() == otherPairOfDice.getDie1());
     }
 
     // Getter methods for each dice:

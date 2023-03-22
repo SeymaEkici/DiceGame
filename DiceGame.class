@@ -48,7 +48,7 @@ public class DiceGame{
                     playerTurn = false;
                     computerTurn = true;
 
-                } else if (playerDice.getDie1 == 1 || playerDice.getDie2 == 1) {
+                } else if (playerDice.getDie1() == 1 || playerDice.getDie2() == 1) {
 
                     playerTurnScore = 0;
                     System.out.println("You've got a 1!");
@@ -110,7 +110,7 @@ public class DiceGame{
                                         + "Better luck next time :D");
                         return;
 
-                    } else if (computerTurnScore => 20) {
+                    } else if (computerTurnScore >= 20) {
 
                         computerTotalScore += computerTurnScore;
                         playerTurn = true;
